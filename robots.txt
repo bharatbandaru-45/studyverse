@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://studyverse-kappa.vercel.app/sitemap.xml
