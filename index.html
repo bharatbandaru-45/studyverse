@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b16" />
+  <meta name="description" content="STUDYVERSE — your space to learn, focus and grow." />
+  <title>STUDYVERSE — Learn beyond limits</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Studyverse home"><span class="brand-mark">S</span><span>STUDY<span class="brand-accent">VERSE</span></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="home"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-view="ai"><span>✧</span> AI Study Room <i class="soon">BETA</i></button>
+        <button class="nav-item" data-view="tasks"><span>▤</span> My Tasks</button>
+        <button class="nav-item" data-view="notes"><span>▧</span> Notes</button>
+        <button class="nav-item" data-view="focus"><span>◉</span> Focus Studio</button>
+      </nav>
+      <div class="side-label side-label-bottom">PERSONAL</div>
+      <div class="mini-card">
+        <div class="mini-orb">✦</div>
+        <strong>Keep your streak alive</strong>
+        <p>A little progress every day adds up.</p>
+        <div class="streak"><span>✦ 0 day streak</span><span>Start today</span></div>
+      </div>
+      <div class="sidebar-footer"><span class="status-dot"></span> Your workspace is ready</div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <b id="pageName">Overview</b></div>
+        <div class="top-actions">
+          <span class="offline-pill"><i></i> Offline ready</span>
+          <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☼</button>
+          <div class="avatar">B</div>
+        </div>
+      </header>
+
+      <section class="view active-view" id="homeView">
+        <div class="hero-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEARNING UNIVERSE</div>
+            <h1>Make today<br><span class="gradient-text">count.</span></h1>
+            <p class="hero-copy">A clearer mind. A smarter plan. A better you.<br>Welcome to your personal learning space.</p>
+            <button class="primary-btn" data-go="ai">Explore AI Study Room <span>↗</span></button>
+          </div>
+          <div class="hero-art" aria-label="Abstract glowing 3D planet illustration">
+            <div class="planet-ring ring-a"></div><div class="planet-ring ring-b"></div>
+            <div class="planet"><div class="planet-shine"></div><span>✦</span></div>
+            <div class="orbit-dot dot-a"></div><div class="orbit-dot dot-b"></div><div class="orbit-dot dot-c"></div>
+            <div class="art-caption"><span class="pulse"></span> YOUR POTENTIAL, UNLOCKED</div>
+          </div>
+        </div>
+
+        <div class="section-heading"><div><div class="eyebrow">YOUR OVERVIEW</div><h2>Pick up where you left off</h2></div><span class="date-label" id="todayLabel"></span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-icon purple">▤</div><div class="stat-number" id="taskCount">0</div><div class="stat-caption">Tasks to do</div><div class="stat-foot">Stay one step ahead</div></article>
+          <article class="stat-card"><div class="stat-icon cyan">▧</div><div class="stat-number" id="noteCount">0</div><div class="stat-caption">Saved notes</div><div class="stat-foot">Your ideas, in one place</div></article>
+          <article class="stat-card"><div class="stat-icon pink">◷</div><div class="stat-number" id="focusCount">0<span class="unit">m</span></div><div class="stat-caption">Focus minutes today</div><div class="stat-foot">Every minute matters</div></article>
+          <article class="stat-card highlight-stat"><div class="stat-icon gold">✦</div><div class="stat-number">∞</div><div class="stat-caption">Room to grow</div><div class="stat-foot">Your next chapter starts now</div></article>
+        </div>
+
+        <div class="lower-grid">
+          <article class="panel quick-panel"><div class="panel-head"><div><div class="eyebrow">GET STARTED</div><h3>Your tools, one click away</h3></div><span class="panel-spark">✧</span></div>
+            <div class="quick-grid">
+              <button class="quick-action" data-go="ai"><span class="quick-icon q-purple">✧</span><b>Ask AI</b><small>Understand a topic</small><span class="quick-arrow">↗</span></button>
+              <button class="quick-action" data-go="tasks"><span class="quick-icon q-cyan">▤</span><b>Add a task</b><small>Plan your next move</small><span class="quick-arrow">↗</span></button>
+              <button class="quick-action" data-go="notes"><span class="quick-icon q-pink">▧</span><b>Write a note</b><small>Capture an idea</small><span class="quick-arrow">↗</span></button>
+              <button class="quick-action" data-go="focus"><span class="quick-icon q-gold">◉</span><b>Start focus</b><small>Make time count</small><span class="quick-arrow">↗</span></button>
+            </div>
+          </article>
+          <article class="panel quote-panel"><div class="quote-mark">“</div><div class="eyebrow">A THOUGHT TO KEEP</div><h3>Small steps every day lead to big changes.</h3><p>Build your future, one focused session at a time.</p><div class="quote-line"></div><span class="quote-author">THE STUDYVERSE MINDSET</span></article>
+        </div>
+        <footer class="footer-note">STUDYVERSE <span>·</span> Learn beyond limits</footer>
+      </section>
+
+      <section class="view" id="aiView">
+        <div class="page-intro"><div class="eyebrow">YOUR PERSONAL LEARNING ASSISTANT</div><h1>AI Study <span class="gradient-text">Room.</span></h1><p>Ask questions, explore ideas and make difficult topics easier to understand.</p></div>
+        <div class="panel ai-panel">
+          <div class="ai-heading"><div class="ai-avatar">✧</div><div><b>Studyverse Assistant</b><small><span class="status-dot"></span> Demo interface · API not connected</small></div></div>
+          <div class="chat-area" id="chatArea"><div class="assistant-message">Hey there! What are you learning today? Ask me a question or choose a suggested topic below.</div></div>
+          <div class="suggestions"><button class="suggestion">Explain photosynthesis simply</button><button class="suggestion">What is a data structure?</button><button class="suggestion">Help me plan my study day</button></div>
+          <form class="chat-form" id="chatForm"><input id="chatInput" placeholder="Ask your study question..." autocomplete="off"><button class="send-btn" aria-label="Send message">↑</button></form>
+          <p class="disclaimer">Demo only: connect a trusted AI provider through a secure backend before publishing. Never place API keys in browser code.</p>
+        </div>
+      </section>
+
+      <section class="view" id="tasksView">
+        <div class="page-intro"><div class="eyebrow">PLAN WITH PURPOSE</div><h1>My <span class="gradient-text">Tasks.</span></h1><p>Turn your goals into small, achievable steps.</p></div>
+        <div class="panel">
+          <form class="add-form" id="taskForm"><input id="taskInput" placeholder="What do you need to get done?" maxlength="120" required><button class="primary-btn">Add task <span>＋</span></button></form>
+          <div class="list-head"><b>YOUR TASK LIST</b><span id="taskSummary">0 tasks</span></div>
+          <div id="taskList" class="item-list empty-state">No tasks yet. Add one small goal to begin.</div>
+        </div>
+      </section>
+
+      <section class="view" id="notesView">
+        <div class="page-intro"><div class="eyebrow">SAVE WHAT MATTERS</div><h1>Your <span class="gradient-text">Notes.</span></h1><p>Quick thoughts, class notes and ideas — saved on this device.</p></div>
+        <div class="panel">
+          <form class="note-form" id="noteForm"><input id="noteTitle" placeholder="Note title" maxlength="80" required><textarea id="noteBody" placeholder="Start writing your note..." rows="4" required></textarea><button class="primary-btn">Save note <span>＋</span></button></form>
+          <div class="list-head"><b>RECENT NOTES</b><span id="noteSummary">0 notes</span></div>
+          <div id="noteList" class="notes-grid empty-state">Your saved notes will appear here.</div>
+        </div>
+      </section>
+
+      <section class="view" id="focusView">
+        <div class="page-intro"><div class="eyebrow">LESS DISTRACTION, MORE FLOW</div><h1>Focus <span class="gradient-text">Studio.</span></h1><p>Set a timer, play your own audio and get into the zone.</p></div>
+        <div class="panel focus-panel">
+          <div class="timer-orb"><div class="timer-inner"><div class="eyebrow">FOCUS SESSION</div><div class="timer" id="timer">25:00</div><span id="timerState">READY WHEN YOU ARE</span></div></div>
+          <div class="timer-controls"><button class="primary-btn" id="startTimer">Start focus <span>▶</span></button><button class="secondary-btn" id="resetTimer">Reset</button></div>
+          <div class="audio-box"><div><b>Personal focus audio</b><small>Choose an audio file stored on your device.</small></div><label class="upload-btn">Choose audio<input type="file" id="audioFile" accept="audio/*" hidden></label><audio id="audioPlayer" controls></audio></div>
+          <p class="disclaimer">Only use audio you own or have permission to play. Audio files are not uploaded.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
